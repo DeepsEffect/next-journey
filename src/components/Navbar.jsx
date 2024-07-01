@@ -23,11 +23,24 @@ const Navbar = () => {
       title: "Blogs",
       path: "/blogs",
     },
+    {
+      title: "Dashboard",
+      path: "/dashboard",
+    },
   ];
 
   const handleLogin = () => {
     router.push("/login");
   };
+
+  if (pathName.includes("dashboard")) {
+    return (
+      <>
+        <div className="bg-red-400 p-6">Dashboard Layout</div>
+      </>
+    );
+  }
+
   return (
     <nav className="flex justify-between items-center bg-lime-700 py-8 px-4">
       <Link href={"/"}>
@@ -45,7 +58,7 @@ const Navbar = () => {
         ))}
         <button
           onClick={handleLogin}
-          className="p-4 bg-black font-bold rounded-lg"
+          className="p-4 bg-black font-bold rounded-lg" 
         >
           Login
         </button>
