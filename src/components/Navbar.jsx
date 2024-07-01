@@ -19,11 +19,15 @@ const Navbar = () => {
       title: "Contacts",
       path: "/contacts",
     },
+    {
+      title: "Blogs",
+      path: "/blogs",
+    },
   ];
-  
+
   const handleLogin = () => {
-    router.push('/login')
-  }
+    router.push("/login");
+  };
   return (
     <nav className="flex justify-between items-center bg-lime-700 py-8 px-4">
       <Link href={"/"}>
@@ -39,7 +43,12 @@ const Navbar = () => {
             {navLink.title}
           </Link>
         ))}
-        <button onClick={handleLogin} className="p-4 bg-black font-bold rounded-lg">Login</button>
+        <button
+          onClick={handleLogin}
+          className="p-4 bg-black font-bold rounded-lg"
+        >
+          Login
+        </button>
       </ul>
     </nav>
   );
