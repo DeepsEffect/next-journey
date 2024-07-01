@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const BlogsPage = () => {
+  // console.log(name);
   return (
     <div>
       <h2>This is blogs page</h2>
