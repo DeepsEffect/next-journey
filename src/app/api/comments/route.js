@@ -18,9 +18,6 @@ export const POST = async(request) => {
   });
 };
 
-//* patch method
-
-
 const comments = [
   {
     id: 1,

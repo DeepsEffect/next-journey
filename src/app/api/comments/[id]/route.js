@@ -1,13 +1,23 @@
+//* patch method
 export async function PATCH(request, { params }) {
   const body = await request.json();
   const index = comments.findIndex((c) => c.id === parseInt(params.id));
   comments[index] = {
-    text : body.text
-  }
+    text: body.text,
+  };
   return Response.json({
     message: "comment updated",
-    comments
+    comments,
   });
+}
+
+//* delete method
+export async function DELETE(request, { params }) {
+  const newComments =  comments.filter((c) => c.id !== parseInt(params.id));
+  return Response.json({
+    message: 'comment deleted',
+    newComments
+  })
 }
 
 const comments = [
